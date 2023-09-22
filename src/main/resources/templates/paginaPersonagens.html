@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <title>Personagens</title>
+</head>
+
+<body>
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Login</th>
+                <th scope="col">Senha</th>
+                <th scope="col">Nome personagem</th>
+                <th scope="col">Classe personagem</th>
+                <th scope="col">Espécie personagem</th>
+                <th scope="col">Data de nascimento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="personagem: ${personagem}">
+                <td th:text="${personagem.login}"></td>
+                <td th:text="${personagem.senha}"></td>
+                <td th:text="${personagem.nomePersonagem}"></td>
+                <td th:text="${personagem.classe}"></td>
+                <td th:text="${personagem.especie}"></td>
+                <td th:text="${personagem.dtNascimento}"></td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
